@@ -1,4 +1,4 @@
-// Toggle theme
+// Toggle theme; choice persists between browser sessions
 
 const localTheme = window.localStorage && window.localStorage.getItem("theme");
 const themeToggle = document.querySelector(".theme-toggle");
