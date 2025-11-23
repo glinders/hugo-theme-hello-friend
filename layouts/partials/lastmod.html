@@ -4,7 +4,7 @@
   {{ with .Lastmod }}
     <span class="post-moddate">
       ({{ $.Site.Params.LastModDisplay }}
-      {{ .Format ($.Site.Params.DateFormatSingle | default "DFee: 01 Jan 2006") }})
+      {{ .Format ($.Site.Params.DateFormatSingle | default "01 Jan 2006") }})
     </span>
   {{ end }}
 {{ end }}
