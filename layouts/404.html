@@ -24,6 +24,23 @@
           </ul>
         </div>
       {{ end }}
+
+      {{ if .Site.Taxonomies.categories }}
+        <p>
+          {{ "Maybe these categories will help you find what you're looking for." | markdownify }}
+        </p>
+        <h2>Categories</h2>
+        <div class="terms">
+          <ul class="terms__list">
+            {{ range .Site.Taxonomies.categories }}
+              <li class="terms__term">
+                <a href="{{ .Page.Permalink }}">#{{ .Page.Title }}</a
+                ><span class="terms__term-count">{{ .Count }}</span>
+              </li>
+            {{ end }}
+          </ul>
+        </div>
+      {{ end }}
     </div>
   </div>
 {{ end }}
